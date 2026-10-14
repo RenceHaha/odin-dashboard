@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <!-- header -->
+        <div class="search-wrapper">
+            <svg fill="#000000" width="18px" height="18px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M11,2 C15.9705627,2 20,6.02943725 20,11 C20,13.124779 19.2636898,15.0775836 18.0323074,16.6171757 L21.7071068,20.2928932 C22.0976311,20.6834175 22.0976311,21.3165825 21.7071068,21.7071068 C21.3466228,22.0675907 20.7793918,22.0953203 20.3871006,21.7902954 L20.2928932,21.7071068 L16.6171757,18.0323074 C15.0775836,19.2636898 13.124779,20 11,20 C6.02943725,20 2,15.9705627 2,11 C2,6.02943725 6.02943725,2 11,2 Z M11,4 C7.13400675,4 4,7.13400675 4,11 C4,14.8659932 7.13400675,18 11,18 C14.8659932,18 18,14.8659932 18,11 C18,7.13400675 14.8659932,4 11,4 Z"/>
+            </svg>
+            <div class="search-input"></div>
+        </div>
+        <div class="profile-wrapper">
+            <svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.6 9.45798V8.4C5.6 4.86538 8.46538 2 12 2C15.5346 2 18.4 4.86537 18.4 8.4V9.45798C18.4 11.7583 19.0649 14.0096 20.3146 15.9409L21 17H3L3.68539 15.9408C4.93512 14.0096 5.6 11.7583 5.6 9.45798Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M11 20.8889V20.8889C11.5344 21.4827 12.4656 21.4827 13 20.8889V20.8889" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <img src="./assets/images/cat1.jpg" alt="" class="profile-icon">
+            <div class="name">Morgan Oakley</div>
+        </div>
+        <div class="welcome-wrapper">
+            <img src="./assets/images/cat1.jpg" alt="" class="profile-icon">
+            <div class="welcome-message"> 
+                <span class="message">Hi there,</span>
+                <h4 class="name">Morgan Oakley (@morgan)</h4>
+            </div>
+        </div>
+        <div class="button-wrapper">
+            <button>New</button>
+            <button>Upload</button>
+            <button>Share</button>
+        </div>
+    </header>
+
+    <aside>
+        <div class="logo">
+            Dashboard
+        </div>
+        <ul>
+            <li>Home</li>
+            <li>Profile</li>
+            <li>Messages</li>
+            <li>History</li>
+            <li>Tasks</li>
+            <li>Communities</li>
+        </ul>
+        <ul>
+            <li>Settings</li>
+            <li>Support</li>
+            <li>Privacy</li>
+        </ul>
+    </aside>
+
+    <main>
+        <!-- main -->
+        <div class="project-container">
+            <h5>Your Projects</h4>
+            <div class="article-container">
+                <!-- repository projects dynamically inserted here -->
+            </div>
+        </div>
+        <div class="announcement-container">
+            <h5>Announcement</h5>
+            <div class="announcement">
+                <!-- announcement data dynamically inserted here -->
+            </div>
+        </div>
+        <div class="trending-container">
+            <h5>Trending</h5>
+            <div class="trending-repositories">
+                <!-- top repositories dynamically inserted here -->
+            </div>
+        </div>
+    </main>
+
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

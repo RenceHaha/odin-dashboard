@@ -1,0 +1,232 @@
+/* @font-face {
+    font-family: 'Jost';
+    src: url('./assets/fonts/Jost-VariableFont_wght.ttf')format(woff2);
+    font-display: swap;
+} */
+
+
+:root{
+    --bg-blue: #1992d4;
+    --bg-white: #ffffff;
+    --bg-gray: #e2e8f0;
+    --bg-yellow: #f0b429;
+    --text-gray: #8a8a8a;
+
+    --fs-sm: 1rem;
+    --fs-xs: 0.75rem;
+    --fs-2xs: 0.60rem;
+    --fs-3xs: 0.25rem;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    line-height: 1.5;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 6fr;
+}
+
+header{
+    background-color: var(--bg-white);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    padding: 15px 30px;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header .search-input{
+    height: 24px;
+    width: 80%;
+    border-radius: 20px;
+    background-color: var(--bg-gray);
+}
+
+header .profile-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-icon{
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background-color: bisque;
+}
+
+header .button-wrapper{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    height: 80%;
+    width: 85%;
+    align-content: center;
+}
+
+.button-wrapper button{
+    all: unset;
+    background-color: var(--bg-blue);
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    font-size: var(--fs-xs);
+    padding: 0.60em 1em;
+}
+
+.welcome-wrapper{
+    display: flex;
+    gap: 15px;
+}
+
+.welcome-wrapper .message{
+    font-size: var(--fs-xs);
+    font-weight: 550;
+}
+
+.welcome-message .name{
+    font-weight: 750;
+}
+
+.welcome-wrapper .profile-icon{
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.icon{
+    height: 24px;
+    background-color: black;
+    border-radius: 50%;
+    width: 24px;
+}
+
+aside{
+    grid-column: 1;
+    grid-row: 1 / -1;
+    background-color: var(--bg-blue);
+    color: white;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    padding: 20px;
+}
+
+aside ul li{
+    list-style: none;
+}
+
+
+
+main{
+    background-color: var(--bg-gray);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: repeat(2, min-content);
+    padding: 25px 15px;
+    gap: 20px;
+}
+
+
+.announcement-container{
+    
+}
+
+.trending-container{
+    grid-column: 2;
+}
+
+.project-container{
+    grid-row: 1 / -1;
+}
+
+.trending-repositories, .announcement, .article-container{
+    margin-top: 10px;
+}
+
+
+.project-container .article-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.content{
+    background-color: var(--bg-white);
+    padding: 1.5em;
+    border-radius: 5px;
+    position: relative;
+    border-left: 5px solid var(--bg-yellow);
+}
+
+.announcement, .trending-repositories{
+    padding: 1.5em;
+    background-color: var(--bg-white);
+    border-radius: 5px;
+}
+
+.trending-repositories{
+    display: flex;
+    flex-direction: column;
+    height: min-content;
+    gap: 10px;
+}
+
+.announcement > div{
+    padding: 0.5em 0;
+}
+
+.announcement > div:first-child{
+    padding-top: 0;
+}
+
+.announcement > div:not(:last-child){
+    border-bottom: 1px solid var(--bg-gray);
+}
+
+.announcement h5{
+    font-size: var(--fs-xs);
+}
+
+.announcement p{
+    font-size: var(--fs-2xs);
+}
+
+.content p{
+    color: var(--text-gray);
+    font-size: var(--fs-xs);
+}
+
+.content .button-group{
+    display: flex;
+    gap: 1em;
+    margin-top: 2em;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.user{
+    display: flex;
+    gap: 10px;
+}
+
+.user p{
+    font-size: var(--fs-2xs);
+}
